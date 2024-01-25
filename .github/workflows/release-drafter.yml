@@ -2,12 +2,14 @@ name: QShop Editor Deploy Release Drafter
 
 on:
   pull_request:
+    branches: 
+        - 'prod'
     types: [closed]
 
 jobs:
   # release drafter
   update_release_draft:
-    if: github.event.pull_request.merged == true && github.base_ref == 'prod'
+    if: github.event.pull_request.merged == true
     permissions:
       contents: write
       pull-requests: write
