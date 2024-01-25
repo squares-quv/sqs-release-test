@@ -1,0 +1,43 @@
+# enable labeler on issues, prs, or both.
+enable:
+  issues: false
+  prs: true # PR 에서만 오토 라벨링 허용
+# 레이블을 성공적으로 붙이고 PR에 보낼 코멘트를 설정
+comments:
+  prs: |
+    Labeler has applied any labels matching special text in your title and description.
+    Please review the labels and make any necessary changes.
+# 레이블
+labels:
+  '✨ Feature':
+    include:
+      - '\bFeature\b'
+  '🐧 Feature':
+    include:
+      - '\bExperiment\b'
+  '💡 Improvement':
+    include:
+      - '\bStyle\b'     # 코드 스타일 변경
+      - '\bDesign\b'    # CSS 등 UI 디자인 변경
+      - '\bRefector\b'  # 코드 리팩토링
+      - '\bImprove\b'
+      - '\bSimplify\b'
+      - '\bImplement\b'
+  '🐞 BugFix':
+    include:
+      - '\bFix\b'
+  '🚑 Hotfix':
+    include:
+      - '\bHotfix\b'
+  '🔀 Merge':
+    include:
+      - '\bMerge\b'
+  '🔖 Release:patch':
+    include:
+      - '\bRelease:patch\b'
+  '🔖 Release:minor':
+    include:
+      - '\bRelease:minor\b'
+  '🔖 Release:major':
+    include:
+      - '\bRelease:major\b'

@@ -1,0 +1,42 @@
+name-template: '🚀 QShop v$RESOLVED_VERSION'
+tag-template: 'v$RESOLVED_VERSION'
+categories:
+  - title: '🆕 큐샵에 새로운 기능이 추가되었어요!!'
+    labels:
+      - '✨ Feature'
+  - title: '🐧 퍼스트펭귄팀의 실험적인 기능도 추가되었습니다!'
+    labels:
+      - '🐧 Feature'
+  - title: '🔥 큐샵 사용성 개선에 힘썼습니다.'
+    labels:
+      - '💡 Improvement'    # 코드 스타일 변경, CSS 등 UI 디자인 변경, 코드 리팩토링 등 개선 처리
+  - title: '🛠️ 결함을 수정했습니다.'
+    labels:
+      - '🐞 BugFix'
+      - '🚑 Hotfix'
+  - title: '✅ Release Update'
+    labels:
+      - '🔖 Release:major'
+      - '🔖 Release:minor'
+      - '🔖 Release:patch'
+change-template: '- $TITLE (#$NUMBER) by @$AUTHOR '
+change-title-escapes: '\<*_&'
+prerelease-identifier: 'alpha'
+exclude-labels:
+  - '🔀 Merge'
+version-resolver:
+  major:
+    labels:
+      - '🔖 Release:major'
+  minor:
+    labels:
+      - '🔖 Release:minor'
+  patch:
+    labels:
+      - '🔖 Release:patch'
+  default: patch
+template: |
+  ## 🚀 이번 버전에서는 어떤 게 바뀌었을까요?
+  ---
+  $CHANGES
+no-changes-template: '앗! 변경사항이 없어요. 😖'

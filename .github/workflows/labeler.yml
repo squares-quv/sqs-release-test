@@ -1,0 +1,22 @@
+name: QShop Editor Deploy Auto Labeler
+
+on:
+  pull_request:
+    branches:
+        - "*"
+    types: [opened]
+
+jobs:
+  # auto labeler
+  labeler:
+    runs-on: ubuntu-latest
+    # 리파지토리에 대한 권한 설정
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - name: Check Labels
+        id: labeler
+        uses: jimschubert/labeler-action@v1
+        with:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
