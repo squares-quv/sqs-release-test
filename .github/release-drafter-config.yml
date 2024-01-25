@@ -21,9 +21,9 @@ categories:                                  # 카테고리, 릴리즈 노트가
       - '🔖 Release:patch'
 change-template: '- $TITLE (#$NUMBER) by @$AUTHOR ' # 릴리즈 노트에 작성 될 각 pr 항목에 표시 할 내용
 change-title-escapes: '\<*_&'
-exclude-labels:
+exclude-labels:                                     # 릴리즈 노트에서 제외 할 레이블
   - '🔀 Merge'
-version-resolver:
+version-resolver:                                   # 아래 labels에 설정한 레이블에 따라 어떤 버전을 패치 할지 정하는 설정
   major:
     labels:
       - '🔖 Release:major'
@@ -38,4 +38,4 @@ template: |
   ## 🚀 이번 버전에서는 어떤 게 바뀌었을까요?
   ---
   $CHANGES
-no-changes-template: '앗! 변경사항이 없어요. 😖'
+no-changes-template: '앗! 변경사항이 없어요. 😖'        # 변경 항목이 없는 경우 보여줄 템플릿
