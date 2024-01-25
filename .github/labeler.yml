@@ -11,33 +11,32 @@ comments:
 labels:
   '✨ Feature':
     include:
-      - '\bFeature\b'
+      - '\bFeature\b'    # 일반적인 신규 기능 추가 pr title
   '🐧 Feature':
     include:
-      - '\bExperiment\b'
+      - '\bExperiment\b' # 퍼펭팀의 신규 기능 추가 pr title
   '💡 Improvement':
     include:
-      - '\bStyle\b'     # 코드 스타일 변경
-      - '\bDesign\b'    # CSS 등 UI 디자인 변경
-      - '\bRefector\b'  # 코드 리팩토링
-      - '\bImprove\b'
-      - '\bSimplify\b'
-      - '\bImplement\b'
+      - '\bStyle\b'      # 코드 스타일 변경 pr title
+      - '\bDesign\b'     # CSS 등 UI 디자인 변경 pr title
+      - '\bRefector\b'   # 코드 리팩토링 pr title
+      - '\bImprove\b'    # 기능, 구조, 성능 등의 개선 pr title
+      - '\bImplement\b'  # 새로운 것들이 구현된 경우 pr title
   '🐞 BugFix':
     include:
-      - '\bFix\b'
+      - '\bFix\b'        # 버그 수정 및 결함 처리 pr title
   '🚑 Hotfix':
     include:
-      - '\bHotfix\b'
+      - '\bHotfix\b'     # 긴급 수정 사항 pr title
   '🔀 Merge':
     include:
-      - '\bMerge\b'
+      - '\bMerge\b'      # 단순 병합 시, 릴리즈 노트에서 제외할 용도로 사용하는 pr title
   '🔖 Release:patch':
     include:
-      - '\bRelease:patch\b'
+      - '\bRelease:patch\b' # 메이저 버전 업데이트 시 사용될 레이블, pr title
   '🔖 Release:minor':
     include:
-      - '\bRelease:minor\b'
+      - '\bRelease:minor\b' # 마이너 버전 업데이트 시 사용될 레이블, pr title
   '🔖 Release:major':
     include:
-      - '\bRelease:major\b'
+      - '\bRelease:major\b' # 패치 버전 업데이트 시 사용될 레이블, pr title
