@@ -1,6 +1,6 @@
-name-template: '🚀 QShop v$RESOLVED_VERSION'
-tag-template: 'v$RESOLVED_VERSION'
-categories:
+name-template: '🚀 QShop v$RESOLVED_VERSION' # 릴리즈 노트의 제목이 될 템플릿, 아래 version-resolver 설정에 따른 버전을 따라간다.
+tag-template: 'v$RESOLVED_VERSION'           # 릴리즈 노트가 publish 될 때 생성될 tag 명
+categories:                                  # 카테고리, 릴리즈 노트가 자동으로 작성 될 시 보여줄 항목들을 구분 한다.
   - title: '🆕 큐샵에 새로운 기능이 추가되었어요!!'
     labels:
       - '✨ Feature'
@@ -9,7 +9,7 @@ categories:
       - '🐧 Feature'
   - title: '🔥 큐샵 사용성 개선에 힘썼습니다.'
     labels:
-      - '💡 Improvement'    # 코드 스타일 변경, CSS 등 UI 디자인 변경, 코드 리팩토링 등 개선 처리
+      - '💡 Improvement'
   - title: '🛠️ 결함을 수정했습니다.'
     labels:
       - '🐞 BugFix'
@@ -19,12 +19,11 @@ categories:
       - '🔖 Release:major'
       - '🔖 Release:minor'
       - '🔖 Release:patch'
-change-template: '- $TITLE (#$NUMBER) by @$AUTHOR '
+change-template: '- $TITLE (#$NUMBER) by @$AUTHOR ' # 릴리즈 노트에 작성 될 각 pr 항목에 표시 할 내용
 change-title-escapes: '\<*_&'
-prerelease-identifier: 'alpha'
-exclude-labels:
+exclude-labels:                                     # 릴리즈 노트에서 제외 할 레이블
   - '🔀 Merge'
-version-resolver:
+version-resolver:                                   # 아래 labels에 설정한 레이블에 따라 어떤 버전을 패치 할지 정하는 설정
   major:
     labels:
       - '🔖 Release:major'
@@ -39,4 +38,4 @@ template: |
   ## 🚀 이번 버전에서는 어떤 게 바뀌었을까요?
   ---
   $CHANGES
-no-changes-template: '앗! 변경사항이 없어요. 😖'
+no-changes-template: '앗! 변경사항이 없어요. 😖'        # 변경 항목이 없는 경우 보여줄 템플릿
